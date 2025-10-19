@@ -4,166 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDRB Dashboard</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            background-color: #f7f9fc;
-        }
-        /* Navbar */
-        
-        nav {
-            background-color: #003366;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        nav h1 {
-            font-size: 20px;
-            margin: 0;
-            letter-spacing: 0.5px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: background 0.3s;
-        }
-        
-        .nav-links a:hover,
-        .nav-links a.active {
-            background-color: #00509e;
-        }
-        /* Konten utama */
-        
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: calc(100vh - 70px);
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        
-        .section {
-            display: none;
-            width: 100%;
-            max-width: 1300px;
-        }
-        
-        .section.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-                margin-top: 10px;
-            }
-            .nav-links a {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>PDRB Pengeluaran ADHB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <h1>PDRB Dashboard</h1>
-        <div class="nav-links">
-            <a href="#" class="active" onclick="showSection('pengeluaran')">PDRB Pengeluaran ADHB</a>
-            <a href="#" onclick="showSection('lapangan')">PDRB Lapangan Usaha ADHB</a>
-        </div>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-logo">📊 Dashboard PDRB</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">PDRB Pengeluaran ADHB</a></li>
+            <li><a href="#">PDRB Lapangan Usaha ADHB</a></li>
+            <li><a href="#">Indikator Pembangunan Ekonomi</a></li>
+        </ul>
     </nav>
 
-    <div class="content">
-        <!-- SECTION: PDRB Pengeluaran ADHB -->
-        <div id="pengeluaran" class="section active">
-            <div class='tableauPlaceholder' id='viz1760799968532' style='position: relative; margin: 0 auto;'>
-                <noscript>
-                    <a href='#'><img alt='OverView ' src='https://public.tableau.com/static/images/F3/F3B5MDFB7/1_rss.png' style='border: none' /></a>
-                </noscript>
-                <object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                    <param name='embed_code_version' value='3' /> 
-                    <param name='path' value='shared&#47;F3B5MDFB7' /> 
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/F3/F3B5MDFB7/1.png' /> 
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                    <param name='filter' value='publish=yes' />
-                    <param name='filter' value='showOnboarding=true' />
-                </object>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+        <div class="dashboard-container">
+            <h2>PDRB Pengeluaran ADHB 2022–2024</h2>
+
+            <div class="tableau-wrapper">
+                <div class='tableauPlaceholder' id='viz1760849882927' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='OverView ' src='https://public.tableau.com/static/images/PD/PDRBPengeluaranADHB2022-2024/OverView/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='PDRBPengeluaranADHB2022-2024/OverView' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/PD/PDRBPengeluaranADHB2022-2024/OverView/1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div>
             </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1760799968532');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                if (divElement.offsetWidth > 800) {
-                    vizElement.style.width = '1300px';
-                    vizElement.style.height = '827px';
-                } else if (divElement.offsetWidth > 500) {
-                    vizElement.style.width = '100%';
-                    vizElement.style.height = '827px';
-                } else {
-                    vizElement.style.width = '100%';
-                    vizElement.style.height = '1627px';
-                }
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
         </div>
+    </main>
 
-        <!-- SECTION: PDRB Lapangan Usaha ADHB -->
-        <div id="lapangan" class="section">
-            <h2>PDRB Lapangan Usaha ADHB</h2>
-            <p>Konten akan ditambahkan kemudian.</p>
-        </div>
-    </div>
+    <!-- ===== SCRIPT EMBED TABLEAU ===== -->
+    <script type='text/javascript'>
+        const divElement = document.getElementById('viz1760849882927');
+        const vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '90vw'; // 90% dari viewport
+        vizElement.style.height = '80vh'; // tinggi proporsional
+        vizElement.style.margin = '0 auto'; // pusatkan
 
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-
-            document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
-            event.target.classList.add('active');
-        }
+        const scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
 
 </body>
