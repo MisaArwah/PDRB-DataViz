@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 /* ===== BODY ===== */
 
 body {
@@ -14,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
@@ -63,8 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* pusatkan seluruh isi */
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2rem 0;
 }
 
@@ -76,10 +77,14 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 95%;
+    width: 100%;
     max-width: 1600px;
     text-align: center;
+    margin: 0 auto;
 }
+
+
+/* ===== TITLE ===== */
 
 .dashboard-container h2 {
     margin-bottom: 1.5rem;
@@ -88,27 +93,52 @@ body {
 }
 
 
-/* ===== EMBED WRAPPER ===== */
+/* ===== TABLEAU WRAPPER ===== */
 
 .tableau-wrapper {
     display: flex;
     justify-content: center;
-    /* pusatkan Tableau */
-    align-items: center;
     width: 100%;
 }
 
-.tableauPlaceholder {
+.tableau-inner {
+    width: 100%;
+    max-width: 1400px;
+    /* agar pas tengah dan tidak keluar layar */
     margin: 0 auto;
-    /* jaga agar selalu di tengah */
+}
+
+.tableauPlaceholder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .tableau-inner {
+        max-width: 95%;
+    }
     .dashboard-container {
-        width: 100%;
+        border-radius: 0;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .dashboard-container h2 {
+        font-size: 1.3rem;
     }
 }
